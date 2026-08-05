@@ -1,19 +1,20 @@
-function findSeat() {
-    const name = document.getElementById("searchInput").value.trim();
+const children = [
 
-    if (name === "") {
-        alert("Please enter your child's full name.");
-        return;
-    }
+{
+name:"Wong Chia Rui",
+table:"1"
+},
 
-    const student = students.find(s =>
-        s.name.toLowerCase() === name.toLowerCase()
-    );
+{
+name:"Child Name 2",
+table:"2"
+},
 
-    if (student) {
-        localStorage.setItem("student", JSON.stringify(student));
-        window.location.href = "result.html";
-    } else {
-        alert("Sorry, we couldn't find that name.");
-    }
+{
+name:"Child Name 3",
+table:"3"
 }
+
+// Add the rest of your 48 children here
+
+];
