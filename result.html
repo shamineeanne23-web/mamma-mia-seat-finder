@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Table</title>
 
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎭 Your Table Awaits</h1>
+
+    <h2 id="studentName"></h2>
+
+    <p>You are seated at</p>
+
+    <h1 id="tableNumber"></h1>
+
+    <br>
+
+    <button onclick="window.location.href='index.html'">
+        Search Again
+    </button>
+
+</div>
+
+<script>
+const student = JSON.parse(localStorage.getItem("student"));
+
+if(student){
+    document.getElementById("studentName").innerHTML = student.name;
+    document.getElementById("tableNumber").innerHTML = "Table " + student.table;
+}
+</script>
+
+</body>
+</html>
